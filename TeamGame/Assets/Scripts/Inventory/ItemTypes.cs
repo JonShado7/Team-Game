@@ -3,6 +3,7 @@
     EmptySlot,
     Default,
     Weapon,
+    Spells,
     Armor,
     Consumable,
     Ammunition
