@@ -22,6 +22,6 @@ public class PlayerHealth : MonoBehaviour
 
     private void LateUpdate()
     {
-        healthTextPro.text = PlayerStats.instance.currentHealth.ToString() + "/" + PlayerStats.instance.maxHealth.ToString();
+
     }
 }
