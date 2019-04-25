@@ -4,10 +4,31 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public static Inventory instance;
+
     //Setting the array of Items in the ItemDatabase to 35
     public ItemDatabase[] itemDatabase = new ItemDatabase[36];
     //Setting an inventory slots list to a new list for the slots
-    public List<InventorySlots> inventorySlots = new List<InventorySlots>();
+    public InventorySlots[] inventorySlots = new InventorySlots[36];
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else if(instance != this)
+        {
+            Destroy(this);
+        }
+        DontDestroyOnLoad(this);
+        Debug.Log("Dont Fucking destroy this!");
+    }
+
+    private void Start()
+    {
+        UpdateImageUI();
+    }
 
     private bool Add(ItemDatabase item)
     {
@@ -18,7 +39,6 @@ public class Inventory : MonoBehaviour
             if (itemDatabase[i] == null)
             {
                 itemDatabase[i] = item;
-                inventorySlots[i].item = item;
                 return true;
             }
         }
@@ -27,7 +47,7 @@ public class Inventory : MonoBehaviour
 
     public void UpdateImageUI()
     {
-        for (int i = 0; i < inventorySlots.Count; i++)
+        for (int i = 0; i < inventorySlots.Length; i++)
         {
             // Looping through the Slots
             inventorySlots[i].UpdateSlot();

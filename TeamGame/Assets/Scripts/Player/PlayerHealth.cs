@@ -7,10 +7,11 @@ public class PlayerHealth : MonoBehaviour
 {
     public TextMeshProUGUI healthTextPro;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -21,6 +22,6 @@ public class PlayerHealth : MonoBehaviour
 
     private void LateUpdate()
     {
-        healthTextPro.text = "Hello";
+        healthTextPro.text = PlayerStats.instance.currentHealth.ToString() + "/" + PlayerStats.instance.maxHealth.ToString();
     }
 }
