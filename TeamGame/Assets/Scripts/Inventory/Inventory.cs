@@ -6,10 +6,13 @@ public class Inventory : MonoBehaviour, ICraftingContainer
 {
     public static Inventory instance;
 
+    [Header("Inventory")]
     //Setting the array of Items in the ItemDatabase to 35
     public ItemDatabase[] itemDatabase = new ItemDatabase[36];
     //Setting an inventory slots list to a new list for the slots
     public InventorySlots[] inventorySlots = new InventorySlots[36];
+    //Referencing the ItemAmount struct in the Crafting Recipe
+    ItemAmount itemAmount;
 
     private void Awake()
     {
@@ -113,6 +116,8 @@ public class Inventory : MonoBehaviour, ICraftingContainer
             {
                 itemDatabase[i] = item;
                 number++;
+                number += itemAmount.Amount++;
+                
             }
         }
         return number;
@@ -127,6 +132,8 @@ public class Inventory : MonoBehaviour, ICraftingContainer
             if (itemDatabase[i] == item)
             {
                 itemDatabase[i] = null;
+                itemAmount.Amount--;
+                Debug.Log(itemAmount.Amount);
                 return true;
             }
         }
@@ -142,6 +149,8 @@ public class Inventory : MonoBehaviour, ICraftingContainer
             if (itemDatabase[i] == null)
             {
                 itemDatabase[i] = item;
+                itemAmount.Amount++;
+                Debug.Log(itemAmount.Amount);
                 return true;
             }
         }

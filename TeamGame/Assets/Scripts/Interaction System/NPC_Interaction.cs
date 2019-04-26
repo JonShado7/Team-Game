@@ -11,6 +11,7 @@ public class NPC_Interaction : MonoBehaviour, IInteractable
     float distance;
     [HideInInspector] public bool canInteract;
 
+    [Header("Dialogue Variables")]
     //Dialog Variables
     DialogManager dialogManager;
     public bool isQuestNPC;
