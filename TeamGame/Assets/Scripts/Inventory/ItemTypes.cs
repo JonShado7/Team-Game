@@ -4,6 +4,9 @@
     Default,
     Weapon,
     Spells,
+    MonsterEssence,
+    BossEssence,
+    Crystals,
     Armor,
     Consumable,
     Ammunition

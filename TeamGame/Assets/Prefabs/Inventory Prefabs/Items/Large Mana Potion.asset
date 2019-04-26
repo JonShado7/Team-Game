@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5ebb779a1df0854e98bd0669aa414e8, type: 3}
-  m_Name: Small Health Potion
+  m_Name: Large Mana Potion
   m_EditorClassIdentifier: 
-  itemName: Small Health Potion
-  description: This is a very common potion to the close combat fighters. This small
-    potion will heal you for 25HP.
-  itemImage: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  price: 35
-  sellPrice: 12
-  type: 8
+  itemName: Large Mana Potion
+  description: This large mana potion was very valuable to the wizards. This Large
+    Mana Potion has the strength to fully restore your Mana!
+  itemImage: {fileID: 21300000, guid: 9d7c6e4896067aa4fa512a00f692ac1c, type: 3}
+  price: 750
+  sellPrice: 385
+  type: 5

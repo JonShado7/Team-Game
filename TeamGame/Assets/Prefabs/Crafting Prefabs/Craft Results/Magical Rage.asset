@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5ebb779a1df0854e98bd0669aa414e8, type: 3}
-  m_Name: Small Health Potion
+  m_Name: Magical Rage
   m_EditorClassIdentifier: 
-  itemName: Small Health Potion
-  description: This is a very common potion to the close combat fighters. This small
-    potion will heal you for 25HP.
-  itemImage: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  price: 35
-  sellPrice: 12
-  type: 8
+  itemName: Raging Wizard
+  description: This spell will temporarily increase the users magical power and physical
+    defense. However, any magical damage done to the user during this time is doubled.
+  itemImage: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+  price: 20000
+  sellPrice: 18000
+  type: 3
