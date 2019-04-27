@@ -6,7 +6,7 @@ public class Inventory : MonoBehaviour, ICraftingContainer
 {
     public static Inventory instance;
 
-    [Header("Inventory")]
+    [Header("==========Inventory==========")]
     //Setting the array of Items in the ItemDatabase to 35
     public ItemDatabase[] itemDatabase = new ItemDatabase[36];
     //Setting an inventory slots list to a new list for the slots

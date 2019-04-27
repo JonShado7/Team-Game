@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Craft : MonoBehaviour
+public class Craft : MonoBehaviour, ICraftingContainer
 {
     public CraftingRecipe craft;
     public ItemDatabase crystals;
@@ -33,5 +33,23 @@ public class Craft : MonoBehaviour
         craft.Craft(iCraft);
     }
 
-    
+    public int ItemCounter(ItemDatabase item)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public bool ContainsItems(ItemDatabase item)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public bool RemoveItems(ItemDatabase item)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public bool AddItems(ItemDatabase item)
+    {
+        throw new System.NotImplementedException();
+    }
 }
