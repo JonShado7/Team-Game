@@ -13,6 +13,7 @@ public class StateController : MonoBehaviour
     [HideInInspector] public NavMeshAgent agent;
     public List<Transform> wayPoints;
     [HideInInspector] public int nextWaypoint;
+    [HideInInspector] public Transform chaseTarget;
 
     // Start is called before the first frame update
     void Start()

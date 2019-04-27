@@ -19,5 +19,6 @@ MonoBehaviour:
   moveSpeed: 2
   damage: 25
   sphereLookRadius: 55
+  sightRange: 25
   searchDuration: 4
   searchTurnSpeed: 120

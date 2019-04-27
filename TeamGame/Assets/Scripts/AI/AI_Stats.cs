@@ -12,6 +12,7 @@ public class AI_Stats : ScriptableObject
     public float moveSpeed;
     public int damage;
     public float sphereLookRadius;
+    public float sightRange;
     public float searchDuration;
     public float searchTurnSpeed;
 
