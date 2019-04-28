@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="Stats", menuName ="Stats/Actions")]
+[CreateAssetMenu(fileName ="Stats", menuName ="Stats/Actions/Patrol")]
 public class Patrol : Action
 {
     public override void Act(StateController controller)
