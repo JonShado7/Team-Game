@@ -14,6 +14,7 @@ public class StateController : MonoBehaviour
     public List<Transform> wayPoints;
     [HideInInspector] public int nextWaypoint;
     [HideInInspector] public Transform chaseTarget;
+    public State remainState;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class StateController : MonoBehaviour
     void Update()
     {
         activeState.UpdateState(this);
+        Debug.Log(activeState);
     }
 
     private void OnDrawGizmos()
@@ -33,6 +35,14 @@ public class StateController : MonoBehaviour
         {
             Gizmos.color = Color.grey;
             Gizmos.DrawWireSphere(eyes.position, enemyStats.sphereLookRadius);
+        }
+    }
+
+    public void TransitionState(State nextState)
+    {
+        if(nextState != remainState)
+        {
+            activeState = nextState;
         }
     }
 }

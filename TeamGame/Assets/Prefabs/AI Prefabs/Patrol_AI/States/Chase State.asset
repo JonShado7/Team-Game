@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3feefe6c02f650340ad40d6e82020479, type: 3}
-  m_Name: Patrol State
+  m_Name: Chase State
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: 14f561c8d0a0b0e4da79ab319edc3730, type: 2}
+  - {fileID: 11400000, guid: de245f967b5c90a4b961768b3a3186f4, type: 2}
   transitions:
-  - decision: {fileID: 11400000, guid: 121ce896e42e01a47b141488553364e0, type: 2}
-    trueState: {fileID: 11400000, guid: dc46a9fef7323af468fe5312ff2fb189, type: 2}
-    falseState: {fileID: 11400000, guid: 4b8107554b3e34a44a38e02a22ac3278, type: 2}
+  - decision: {fileID: 11400000, guid: 63130333c49cb63448a34646aa340660, type: 2}
+    trueState: {fileID: 11400000, guid: 4b8107554b3e34a44a38e02a22ac3278, type: 2}
+    falseState: {fileID: 11400000, guid: a8b2f5eb91f852e4980afe0212890483, type: 2}

@@ -9,16 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2fb8e50b13df514cbb862867aaa6fe4, type: 3}
-  m_Name: Patrol_AI Stats
+  m_Script: {fileID: 11500000, guid: 55223d3ea7cc58e4981cfa6d4d961915, type: 3}
+  m_Name: Chase Action
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 20
-  attackSpeed: 3
-  attackPower: 40
-  moveSpeed: 2
-  damage: 25
-  sphereLookRadius: 1
-  sightRange: 25
-  searchDuration: 4
-  searchTurnSpeed: 120

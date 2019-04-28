@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 180133205}
   m_Layer: 0
-  m_Name: WayPoints for AI
+  m_Name: WayPoints for AI (Patrol AI)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,7 +296,7 @@ GameObject:
   m_Layer: 0
   m_Name: WayPoint 2
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1109,7 +1109,7 @@ GameObject:
   m_Layer: 0
   m_Name: WayPoint 1
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1711,6 +1711,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a8b2f5eb91f852e4980afe0212890483,
         type: 2}
+    - target: {fileID: 8271912984476776622, guid: 33fc14bd4a132534abdade723a60d5f7,
+        type: 3}
+      propertyPath: remainState
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b8107554b3e34a44a38e02a22ac3278,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33fc14bd4a132534abdade723a60d5f7, type: 3}
 --- !u!1001 &1755241673571951518
@@ -1852,7 +1858,7 @@ PrefabInstance:
     - target: {fileID: 5703161957667578896, guid: 8ef7649b071890a408011b5e98fd6efe,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000035360445
+      value: 0.000008517671
       objectReference: {fileID: 0}
     - target: {fileID: 5703161957667578896, guid: 8ef7649b071890a408011b5e98fd6efe,
         type: 3}
@@ -3295,12 +3301,12 @@ PrefabInstance:
     - target: {fileID: 3829597391648310216, guid: 1c93d1a408ed25a418deb41ebc93ef7a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000010384552
+      value: -0.000010877455
       objectReference: {fileID: 0}
     - target: {fileID: 3829597391648310216, guid: 1c93d1a408ed25a418deb41ebc93ef7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000036342575
+      value: -0.000083018145
       objectReference: {fileID: 0}
     - target: {fileID: 3829597391158190375, guid: 1c93d1a408ed25a418deb41ebc93ef7a,
         type: 3}
@@ -3369,6 +3375,11 @@ PrefabInstance:
     - target: {fileID: 4476787440528794909, guid: 432cdcdccea43fb448c8bb5fee2941ce,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476787440528794909, guid: 432cdcdccea43fb448c8bb5fee2941ce,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4476787440528794907, guid: 432cdcdccea43fb448c8bb5fee2941ce,

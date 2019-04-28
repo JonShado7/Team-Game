@@ -17,7 +17,16 @@ public class Patrol : Action
 
         if(controller.agent.remainingDistance <= controller.agent.stoppingDistance && !controller.agent.pathPending)
         {
-            controller.nextWaypoint = (controller.nextWaypoint + 1) % controller.wayPoints.Count;
+            controller.enemyStats.searchDuration -= Time.deltaTime;
+            controller.agent.isStopped = true;
+
+            if (controller.enemyStats.searchDuration <= 0)
+            {
+                controller.agent.isStopped = false;
+                controller.nextWaypoint = (controller.nextWaypoint + 1) % controller.wayPoints.Count;
+                controller.enemyStats.searchDuration = 4;
+            }
+            
         }
     }
 }
