@@ -15,5 +15,5 @@ public class MageStats : AI_Stats
     public int magicDamage;
 
     [Header("=====Mage Type=====")]
-    public MageType type = MageType.basic;
+    public MageType type = MageType.BASIC;
 }

@@ -21,6 +21,24 @@ public class CastSpell_Action : Action
         {
             if (controller.CheckTime(controller.mageStats.castSpeed))
             {
+                switch (controller.mageStats.type)
+                {
+                    case MageType.DARK:
+                        Debug.Log("I am dark");
+                        break;
+                    case MageType.FIRE:
+                        Debug.Log("I am a Pyro");
+                        break;
+                    case MageType.HEALER:
+                        Debug.Log("I am a Medic");
+                        break;
+                    case MageType.HOLY:
+                        Debug.Log("I am Holy");
+                        break;
+                    case MageType.LIGHTNING:
+                        Debug.Log("I am a Shock Expert");
+                        break;
+                }
 
             }
         }

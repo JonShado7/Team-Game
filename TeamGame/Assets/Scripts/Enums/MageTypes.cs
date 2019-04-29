@@ -1,9 +1,9 @@
 ﻿public enum MageType
 {
-    basic,
-    dark,
-    holy,
-    fire,
-    lightning,
-    healer
+    BASIC,
+    DARK,
+    HOLY,
+    FIRE,
+    LIGHTNING,
+    HEALER
 }
