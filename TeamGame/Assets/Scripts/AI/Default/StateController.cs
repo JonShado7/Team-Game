@@ -8,18 +8,23 @@ public class StateController : MonoBehaviour
     [Header("===== Nav Agent Variables=====")]
     public State activeState;
     public AI_Stats enemyStats;
+    public MageStats mageStats;
     public Transform eyes;
 
-    [HideInInspector] public NavMeshAgent agent;
+    [Header("===== States and Patrol Points=====")]
     public List<Transform> wayPoints;
+    public State remainState;
+
+    [HideInInspector] public NavMeshAgent agent;
+    [HideInInspector] public float stateTimeElapsed;
     [HideInInspector] public int nextWaypoint;
     [HideInInspector] public Transform chaseTarget;
-    public State remainState;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+       
     }
 
     // Update is called once per frame
@@ -44,5 +49,17 @@ public class StateController : MonoBehaviour
         {
             activeState = nextState;
         }
+    }
+
+    public bool CheckTime(float duration)
+    {
+        stateTimeElapsed += Time.deltaTime;
+        return (stateTimeElapsed >= duration);
+
+    }
+
+    private void OnExitState()
+    {
+        stateTimeElapsed = 0;
     }
 }

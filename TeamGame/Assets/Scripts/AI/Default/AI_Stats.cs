@@ -9,6 +9,7 @@ public class AI_Stats : ScriptableObject
     public float maxHealth;
     public float attackSpeed;
     public float attackPower;
+    public float attackRange;
     public float moveSpeed;
     public int damage;
     public float sphereLookRadius;

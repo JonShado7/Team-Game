@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2fb8e50b13df514cbb862867aaa6fe4, type: 3}
-  m_Name: Patrol_AI Stats
+  m_Name: AI Stats
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 20
   attackSpeed: 3
   attackPower: 40
+  attackRange: 0
   moveSpeed: 2
   damage: 25
   sphereLookRadius: 1
   sightRange: 25
-  searchDuration: 4
+  searchDuration: 2.5731583
   searchTurnSpeed: 120
