@@ -7,9 +7,10 @@ public class StateController : MonoBehaviour
 {
     [Header("===== Nav Agent Variables=====")]
     public State activeState;
-    public AI_Stats enemyStats;
+    //public AI_Stats enemyStats;
     public MageStats mageStats;
     public Transform eyes;
+
 
     [Header("===== States and Patrol Points=====")]
     public List<Transform> wayPoints;
@@ -18,6 +19,7 @@ public class StateController : MonoBehaviour
     [HideInInspector] public NavMeshAgent agent;
     [HideInInspector] public float stateTimeElapsed;
     [HideInInspector] public int nextWaypoint;
+    [HideInInspector] public float distance;
     [HideInInspector] public Transform chaseTarget;
 
     // Start is called before the first frame update
@@ -30,6 +32,7 @@ public class StateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        distance = Vector3.Distance(this.transform.position, chaseTarget.position);
         activeState.UpdateState(this);
         Debug.Log(activeState);
     }
@@ -39,7 +42,7 @@ public class StateController : MonoBehaviour
         if (activeState != null && eyes != null)
         {
             Gizmos.color = Color.grey;
-            Gizmos.DrawWireSphere(eyes.position, enemyStats.sphereLookRadius);
+            Gizmos.DrawWireSphere(eyes.position, mageStats.sphereLookRadius);
         }
     }
 

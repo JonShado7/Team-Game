@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Stats", menuName = ("Stat/Decisions"))]
+[CreateAssetMenu(fileName = "Stats", menuName = ("Stat/Decisions/Look Decision"))]
 public class LookDecision : Decision
 {
     public override bool Decide(StateController controller)
@@ -15,9 +15,9 @@ public class LookDecision : Decision
     {
         RaycastHit hit;
 
-        Debug.DrawRay(controller.eyes.position, controller.eyes.forward.normalized * controller.enemyStats.sightRange, Color.green);
+        Debug.DrawRay(controller.eyes.position, controller.eyes.forward.normalized * controller.mageStats.sightRange, Color.green);
 
-        if (Physics.SphereCast(controller.eyes.position, controller.enemyStats.sphereLookRadius, controller.eyes.forward, out hit, controller.enemyStats.sightRange)
+        if (Physics.SphereCast(controller.eyes.position, controller.mageStats.sphereLookRadius, controller.eyes.forward, out hit, controller.mageStats.sightRange)
             && hit.collider.CompareTag("Player"))
         {
             controller.chaseTarget = hit.transform;

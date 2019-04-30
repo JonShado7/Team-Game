@@ -25,12 +25,12 @@ public class RandomPatrol : Action
         if (controller.agent.remainingDistance <= controller.agent.stoppingDistance && !controller.agent.pathPending)
         {
             // Decreasing the search duration
-            controller.enemyStats.searchDuration -= Time.deltaTime;
+            controller.mageStats.searchDuration -= Time.deltaTime;
             // ai is not moving
             controller.agent.isStopped = true;
 
             // if the duration reaches 0
-            if (controller.enemyStats.searchDuration <= 0)
+            if (controller.mageStats.searchDuration <= 0)
             {
                 // ai is moving again
                 controller.agent.isStopped = false;
@@ -39,7 +39,7 @@ public class RandomPatrol : Action
                 // setting the next waypoint
                 controller.nextWaypoint = (controller.nextWaypoint + 1) % wayList.Count;
                 // resetting the search duration timer
-                controller.enemyStats.searchDuration = 4;
+                controller.mageStats.searchDuration = 4;
             }
 
         }

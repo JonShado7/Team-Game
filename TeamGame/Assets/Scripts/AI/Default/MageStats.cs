@@ -9,6 +9,10 @@ public class MageStats : AI_Stats
     public bool isSpawnable;
 
     [Header("=====Attributes=====")]
+    public float currentHealth;
+    public float maxHealth;
+    public float currentStamina;
+    public float maxStamina;
     public float castSpeed;
     public float magicPower;
     public float castRange;
