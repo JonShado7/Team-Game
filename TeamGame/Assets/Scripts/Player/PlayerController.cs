@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UMA.Dynamics.Examples;
 
 public class PlayerController : MonoBehaviour 
 {
@@ -18,9 +19,12 @@ public class PlayerController : MonoBehaviour
     private bool canJumpAgain;
     Vector3 jump = new Vector3(0, 2, 0);
 
+    //References
+    SmoothMouseLook smoothFollowCam;
+
     private void Awake()
     {
-        
+        smoothFollowCam = FindObjectOfType<SmoothMouseLook>();
     }
 
     // Start is called before the first frame update
@@ -54,7 +58,10 @@ public class PlayerController : MonoBehaviour
             MovePlayer();
         }
 
-
+        if(smoothFollowCam.axes == SmoothMouseLook.RotationAxes.MouseX)
+        {
+            this.transform.rotation = smoothFollowCam.transform.rotation;
+        }
     }
     // Updated every frame checking to see if object is colliding with the ground
     private void OnCollisionStay()
