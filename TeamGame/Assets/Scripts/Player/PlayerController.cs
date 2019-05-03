@@ -81,8 +81,8 @@ public class PlayerController : MonoBehaviour
         sprinting = false;
         // Local Vector being set to a new Vector
         Vector3 movement = new Vector3(moveX, 0, moveY);
-        // Adding force to the rigidbody 
-        rb.AddForce(movement * moveSpeed);
+
+        this.transform.position += movement * moveSpeed * Time.deltaTime;
 
     }
 
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
         sprinting = true;
         Vector3 movement = new Vector3(moveX, 0, moveY);
 
-        rb.AddForce(movement * sprintSpeed);
+        this.transform.position += movement * sprintSpeed * Time.deltaTime;
     }
 
     void Jump()

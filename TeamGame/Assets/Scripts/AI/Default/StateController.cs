@@ -61,7 +61,7 @@ public class StateController : MonoBehaviour
 
     }
 
-    private void OnExitState()
+    public void OnExitState()
     {
         stateTimeElapsed = 0;
     }

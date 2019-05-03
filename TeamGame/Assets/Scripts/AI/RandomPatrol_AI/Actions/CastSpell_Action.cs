@@ -17,31 +17,41 @@ public class CastSpell_Action : Action
 
         //Debug.DrawRay(controller.eyes.position, controller.eyes.forward.normalized * controller.mageStats.castRange, Color.red);
 
-        //if (Physics.SphereCast(controller.eyes.position, controller.mageStats.sphereLookRadius, controller.eyes.forward, out hit, controller.mageStats.castRange)
-        //    && hit.collider.CompareTag("Player"))
-        //{
-        if (controller.CheckTime(controller.mageStats.castSpeed))
+        if (Physics.SphereCast(controller.eyes.position, controller.mageStats.sphereLookRadius, controller.eyes.forward, out RaycastHit hit, controller.mageStats.castRange)
+            && hit.collider.CompareTag("Player"))
         {
-            switch (controller.mageStats.type)
+            if (controller.CheckTime(controller.mageStats.castSpeed))
             {
-                case MageType.DARK:
-                    Debug.Log("I am dark");
-                    break;
-                case MageType.FIRE:
-                    Debug.Log("I am a Pyro");
-                    break;
-                case MageType.HEALER:
-                    Debug.Log("I am a Medic");
-                    break;
-                case MageType.HOLY:
-                    Debug.Log("I am Holy");
-                    break;
-                case MageType.LIGHTNING:
-                    Debug.Log("I am a Shock Expert");
-                    break;
-            }
+                float originalSpeed;
+                originalSpeed = controller.mageStats.castSpeed;
+                switch (controller.mageStats.type)
+                {
+                    case MageType.DARK:
+                        controller.mageStats.castSpeed += Time.deltaTime;
+                        if (controller.mageStats.castSpeed >= 5)
+                        {
+                            Debug.Log("The Cast Speed Timer Works");
+                            controller.mageStats.castSpeed = originalSpeed;
+                            controller.OnExitState();
+                            Debug.Log(originalSpeed);
+                        }
+                        Debug.Log("I am dark");
+                        break;
+                    case MageType.FIRE:
+                        Debug.Log("I am a Pyro");
+                        break;
+                    case MageType.HEALER:
+                        Debug.Log("I am a Medic");
+                        break;
+                    case MageType.HOLY:
+                        Debug.Log("I am Holy");
+                        break;
+                    case MageType.LIGHTNING:
+                        Debug.Log("I am a Shock Expert");
+                        break;
+                }
 
+            }
         }
-        //}
     }
 }
